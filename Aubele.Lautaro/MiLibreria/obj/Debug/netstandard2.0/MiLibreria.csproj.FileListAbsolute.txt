@@ -1,0 +1,9 @@
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.deps.json
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.dll
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.pdb
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.csprojAssemblyReference.cache
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.AssemblyInfoInputs.cache
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.AssemblyInfo.cs
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.dll
+D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.pdb

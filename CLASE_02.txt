@@ -1,0 +1,12 @@
+estructuras = clases en c#
+tienen estados (variables/atributos)
+comportamientos(funciones/metodos)
+
+se construye a partir de la siguiente estructura 
+[modificadores] class Nombre
+{
+ACA VAN LOS ATRIBUTOS O LOS METODOS
+}
+
+modificadores de visibilidad se le puede dar una caracteristica distinta o modificadores de comportamiento (Los modificadores son opcionales)
+
