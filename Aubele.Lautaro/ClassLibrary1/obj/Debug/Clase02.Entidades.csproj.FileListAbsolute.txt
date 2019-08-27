@@ -4,3 +4,9 @@ D:\VisualStudio\Aubele.Lautaro\ClassLibrary1\obj\Debug\Clase02.Entidades.csprojA
 D:\VisualStudio\Aubele.Lautaro\ClassLibrary1\obj\Debug\Clase02.Entidades.csproj.CoreCompileInputs.cache
 D:\VisualStudio\Aubele.Lautaro\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 D:\VisualStudio\Aubele.Lautaro\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\obj\Debug\Clase02.Entidades.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\obj\Debug\Clase02.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

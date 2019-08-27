@@ -7,3 +7,12 @@ D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.As
 D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.AssemblyInfo.cs
 D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.dll
 D:\VisualStudio\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.pdb
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.deps.json
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.dll
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\bin\Debug\netstandard2.0\MiLibreria.pdb
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.AssemblyInfoInputs.cache
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.AssemblyInfo.cs
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.dll
+C:\Users\alumno\Desktop\Labo_2-master\Labo_2-master\Aubele.Lautaro\MiLibreria\obj\Debug\netstandard2.0\MiLibreria.pdb
