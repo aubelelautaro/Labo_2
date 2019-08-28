@@ -16,9 +16,17 @@ namespace Ejercicio_16
 
       uno.Estudiar(8, 9);
       dos.Estudiar(5, 7);
-      tres.Estudiar(10, 4);
+      tres.Estudiar(10, 3);
 
+            uno.CalcularFinal();
+            dos.CalcularFinal();
+            tres.CalcularFinal();
 
+            Console.WriteLine(uno.Mostrar());
+            Console.WriteLine(dos.Mostrar());
+            Console.WriteLine(tres.Mostrar());
+
+            Console.ReadKey();
     }
   }
 }

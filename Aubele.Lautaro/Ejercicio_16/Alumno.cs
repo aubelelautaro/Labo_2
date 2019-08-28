@@ -38,13 +38,13 @@ namespace Ejercicio_16
 
     public string Mostrar()
     {
-      if(this.notaFinal >0)
+      if(this.notaFinal != -1)
       {
         return this.nombre + " - " + this.apellido + " - " + this.legajo.ToString() + this.notaFinal.ToString(); 
       }
       else
       {
-
+                return "Alumno desaprobado";
       }
     }
 
