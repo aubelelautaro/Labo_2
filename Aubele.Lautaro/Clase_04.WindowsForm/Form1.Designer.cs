@@ -39,13 +39,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCrear
             // 
             this.btnCrear.Location = new System.Drawing.Point(25, 340);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(151, 56);
+            this.btnCrear.Size = new System.Drawing.Size(126, 56);
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -143,9 +144,20 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(157, 340);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(112, 56);
+            this.btnBorrar.TabIndex = 11;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(387, 419);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -166,10 +178,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.TextBox txtEntero;
         private System.Windows.Forms.TextBox txtCadena;
@@ -181,6 +189,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
 

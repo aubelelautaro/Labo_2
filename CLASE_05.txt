@@ -1,0 +1,2 @@
+[MODIFICADOR] static TIPODERETORNO operator nombreOperador (tipo[,tipo]) recibe siempre un tipo de dato o como mucho recibe dos
+UNO DE LOS TIPOS TIENE QUE DEVOLVER ALGO DE TIPO COSA

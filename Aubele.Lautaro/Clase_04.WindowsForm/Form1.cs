@@ -24,7 +24,7 @@ namespace Clase_04.WindowsForm
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -59,10 +59,12 @@ namespace Clase_04.WindowsForm
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            //validar todo esto
             int entero = int.Parse(this.txtEntero.Text);
             string cadena = this.txtCadena.Text;
             DateTime fecha = Convert.ToDateTime(this.txtFecha.Text);
 
+            lstLista.Items.Add($"Entero -> {entero}, Cadena-> {cadena}, Fecha -> {fecha}");
             //MessageBox.Show();
         }
 
@@ -79,6 +81,11 @@ namespace Clase_04.WindowsForm
         private void button4_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.Blue;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            lstLista.Items.Clear();
         }
     }
 }
