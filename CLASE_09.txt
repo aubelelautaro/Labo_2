@@ -1,0 +1,22 @@
+COLECTORES -> NO GENERICOS (OBJECT-OBJECT)
+
+STACK (PILA) ELEMENTOS Q VAN INGRESANDO Y EGRESANDO CONOCIDO COMO L.I.F.O. ( ultimo en entrar es el primero en salir) ej: error en tiempo de ejecucion
+no se puede recorrer o hacer busqueda de elementos, si necesito un elemento del medio de la pila necesito sacar los elementos q estan antes
+
+QUEUE(COLA) F.I.F.O ( primero en entrar primero en salir) no se puede recorrer, si necesito un elemento del medio de la cola necesito sacar los elementos q estan antes
+
+ARRAYLIST Lista dinamica, agregar y sacar elementos en tiempo de ejecucion, si se puede ordenar y encontrar elementos
+
+HASHTABLE sus elementos se almacenan a partir de una clave asociado a un valor, no tienen asociados indices (LA CLAVE Y EL VALOR SON DE TIPO OBJECT)
+
+
+GENERICAS -> LIGADAS A UN UNICO TIPO DE DATO ( EL Q SE INDICA AL MOMENTO DE CREAR LA COLECCION)
+SE COLOCA EL TIPO DE DATO <TYPE>
+PILAS
+COLAS
+(FUNCIONA TODO IGUAL)
+EN VEZ DE ARRAYLIST ES LIST
+EN VEZ DE HASHTABLE ES DICTIONARIE<TYPE,TYPE>
+
+BOXING ES METER UNA VARIABLE DENTRO DE OTRA VARIABLE ( EN LAS NO GENERICAS TODO ES OBJECT Y CUANDO LAS USAS CON INT,STRING,ETC CUESTA MUCHA MEMORIA AL HACER EL BOXING)
+
