@@ -1,0 +1,14 @@
+HERENCIA
+Herencias multiples se puede tener una clase padre y una hija y la hija puede tener 2 o mas clases(solamente en c++)
+
+Herencias simples 1 padre y varios hijos
+
+todo lo del padre se hereda a la clase hija.
+los constructores son lo unico q no se pasa por herencia
+si tengo un constructor distinto en mi clase padre distinto del default, las hijas estan obligadas a invocar a ese constructor
+
+se agrega el modificador protective(si estoy dentro de una relacion de herencia, ese modificador protegido es como si fuese publico entre los hijos)
+se heredan los atributos pero no se pueden visualizarlos
+
+Clase A primaria (PADRE/BASE)
+CLASE B SECUNDARIA (DERIVADAS/HIJAS)
