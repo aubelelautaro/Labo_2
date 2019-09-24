@@ -12,6 +12,7 @@ namespace Clase_10.Entidades
 
         public double Nota { get {return this.nota; } }
 
+        /// LLEGA SIEMPRE NULL ALUMNO, REVISAR!!
         public AlumnoCalificado(Alumno a,double nota):base(a.Nombre,a.Apellido,a.Legajo,a.Examen)
         {
             this.nota = nota;
@@ -19,11 +20,12 @@ namespace Clase_10.Entidades
 
         public AlumnoCalificado(string nombre,string apellido,int legajo,ETipoExamen examen, double nota): this(new Alumno(nombre,apellido,legajo,examen),nota)
         {
+            
         }
 
         private string Mostrar()
         {
-            return Alumno.Mostrar(this) + "Nota: " + this.nota;
+            return Mostrar(this) + "Nota: " + this.nota;
         }
 
         public override string ToString()

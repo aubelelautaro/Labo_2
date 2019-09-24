@@ -15,7 +15,7 @@ namespace Clase_10
     {
         protected Alumno alumno;
 
-        public virtual Alumno Alumno
+        public Alumno Alumno
         {
             get
             {
@@ -27,6 +27,8 @@ namespace Clase_10
             this.txtApellido.Text = a.Apellido;
             this.txtNombre.Text = a.Nombre;
             this.txtLegajo.Text = a.Legajo.ToString();
+            this.cmbTipoDeExamen.Text = a.Examen.ToString();
+            this.txtLegajo.Enabled = false;
         }
 
         public FrmAlumno()
@@ -37,7 +39,7 @@ namespace Clase_10
             this.cmbTipoDeExamen.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        protected virtual void btnAceptar_Click(object sender, EventArgs e)
         {
             int auxLegajo;
             if(!String.IsNullOrEmpty(this.txtNombre.Text) && !String.IsNullOrEmpty(this.txtApellido.Text) && int.TryParse(this.txtLegajo.Text,out auxLegajo))
@@ -52,7 +54,7 @@ namespace Clase_10
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        protected virtual void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();

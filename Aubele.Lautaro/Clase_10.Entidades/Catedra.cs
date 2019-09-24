@@ -66,21 +66,28 @@ namespace Clase_10.Entidades
             bool retorno = false;
             if (!Object.Equals(c, null) && !Object.Equals(a, null))
             {
-                retorno = c.Alumnos.Contains(a);
+                foreach(Alumno value in c.alumnos)
+                {
+                    if(value == a)
+                    {
+                        retorno = true;
+                        break;
+                    }
+                }
             }
             return retorno;
         }
 
     public override string ToString()
     {
-      string cadena = " ";
-      foreach(Alumno item in this.alumnos)
+      string mensaje = " ";
+      foreach(Alumno actual in this.alumnos)
       {
         
-        cadena += item.ToString();
-        cadena += "\n";
+        mensaje += actual.ToString();
+        mensaje += "\n";
       }
-      return cadena;
+      return mensaje;
     }
   }
 }

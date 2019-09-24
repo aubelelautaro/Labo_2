@@ -13,63 +13,39 @@ namespace Clase_10
 {
     public partial class FrmAlumnoCalificado : FrmAlumno
     {
-        public override Alumno Alumno
-        {
-            get
-            {
-                return this.alumno;
-            }
-            set
-            {
-                base.txtApellido.Text = value.Apellido;
-                base.txtNombre.Text = value.Nombre;
-                base.txtLegajo.Text = value.Legajo.ToString();
-                base.cmbTipoDeExamen.SelectedItem = value.Examen;
+        protected TextBox txtCalificacion;
+        private AlumnoCalificado alumnoCalificado;
+        private Alumno alumno;
+        public AlumnoCalificado AlumnoCalificado { get { return this.alumnoCalificado; } }
 
-                base.txtApellido.Enabled = false;
-                base.txtNombre.Enabled = false;
-                base.txtLegajo.Enabled = false;
-                base.cmbTipoDeExamen.Enabled = false;
-            }
-        }
-
-        public FrmAlumnoCalificado()
+        public FrmAlumnoCalificado():base()
         {
             InitializeComponent();
-
             base.txtApellido.Enabled = false;
             base.txtNombre.Enabled = false;
             base.txtLegajo.Enabled = false;
             base.cmbTipoDeExamen.Enabled = false;
+        }
+        public FrmAlumnoCalificado(Alumno a) : this()
+        {
+            this.alumno = a;
+            this.txtNombre.Text = a.Nombre;
+            this.txtApellido.Text = a.Apellido;
+            this.txtLegajo.Text = a.Legajo.ToString();
+            this.cmbTipoDeExamen.SelectedItem = a.Examen;
             this.txtNota.Focus();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        protected override void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            base.btnCancelar_Click(sender, e);
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        protected override void btnAceptar_Click(object sender, EventArgs e)
         {
-            int nota;
-            if (int.TryParse(this.txtNota.Text, out nota))
-            {
-                if (nota >= 0 && nota <= 10)
-                {
-                    alumno = new AlumnoCalificado(this.alumno, nota);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("La nota debe estar entre 0 y 10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("La nota debe ser un numero entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            txtCalificacion = txtNota;
+            alumnoCalificado = new AlumnoCalificado(alumno, double.Parse(txtCalificacion.Text));
+            DialogResult = DialogResult.OK;
         }
 
     }

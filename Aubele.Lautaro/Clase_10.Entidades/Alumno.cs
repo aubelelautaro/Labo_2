@@ -14,21 +14,20 @@ namespace Clase_10.Entidades
         protected ETipoExamen examen;
 
         
-        public enum ETipoExamen
-        {
-            Primero,Segundo,Final
-        }
-     
         public int Legajo { get { return this.legajo;} }
         public string Apellido { get { return this.apellido;} }
         public string Nombre { get { return this.nombre;} }
         public ETipoExamen Examen { get {return this.examen ;} }
 
+        public enum ETipoExamen
+        {
+            Primero, Segundo, Final
+        }
 
         public Alumno(string nombre,string apellido,int legajo,ETipoExamen examen)
         {
-            this.apellido = apellido;
             this.nombre = nombre;
+            this.apellido = apellido;
             this.legajo = legajo;
             this.examen = examen;
         }
@@ -38,12 +37,15 @@ namespace Clase_10.Entidades
             string retorno = "Error";
             if (!Object.Equals(a, null))
             {
-              retorno = $"Nombre: {a.nombre} Apellido: {a.apellido}  Legajo: {a.legajo}  Examen: {a.examen}";
+              retorno = $"Legajo: {a.legajo}  Nombre: {a.nombre} Apellido: {a.apellido}  Examen: {a.examen}";
             }
             return retorno;
         }
-
-      public static bool operator ==(Alumno a, Alumno b)
+        public override string ToString()
+        {
+            return Alumno.Mostrar(this);
+        }
+        public static bool operator ==(Alumno a, Alumno b)
         {
             bool retorno = false;
 

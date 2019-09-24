@@ -19,12 +19,13 @@ namespace Clase_10
         public FrmCatedra()
         {
             InitializeComponent();
+            this.catedra = new Catedra();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.cmbOrdenamiento.DataSource = Enum.GetValues(typeof(Catedra.ETipoOrdenamiento));
             this.cmbOrdenamiento.SelectedIndex = 0;
             this.cmbOrdenamiento.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            this.catedra = new Catedra();
+            
             this.btnCalificar.Enabled = false;
             this.btnModificar.Enabled = false;
             this.DialogResult = DialogResult.Yes;
@@ -33,29 +34,26 @@ namespace Clase_10
 
         private void cmbOrdenamiento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.DialogResult == DialogResult.Yes)
+            switch (this.cmbOrdenamiento.SelectedIndex)
             {
-                switch (this.cmbOrdenamiento.SelectedIndex)
-                {
-                    case 0:
-                        this.catedra.Alumnos.Sort(Alumno.OrdenarPorLegajoAsc);
-                        break;
+                case 0:
+                    this.catedra.Alumnos.Sort(Alumno.OrdenarPorLegajoAsc);
+                    break;
 
-                    case 1:
-                        this.catedra.Alumnos.Sort(Alumno.OrdenarPorLegajoDesc);
-                        break;
+                case 1:
+                    this.catedra.Alumnos.Sort(Alumno.OrdenarPorLegajoDesc);
+                    break;
 
-                    case 2:
-                        this.catedra.Alumnos.Sort(Alumno.OrdenarPorApellidoAsc);
-                        break;
+                case 2:
+                    this.catedra.Alumnos.Sort(Alumno.OrdenarPorApellidoAsc);
+                    break;
 
-                    case 3:
-                        this.catedra.Alumnos.Sort(Alumno.OrdenarPorApellidoDesc);
-                        break;
-                }
-
-                this.ActualizarListadoAlumnos();
+                case 3:
+                    this.catedra.Alumnos.Sort(Alumno.OrdenarPorApellidoDesc);
+                    break;
             }
+
+            this.ActualizarListadoAlumnos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -63,17 +61,17 @@ namespace Clase_10
             FrmAlumno frmAlumno = new FrmAlumno();
             frmAlumno.ShowDialog();
 
-            if(frmAlumno.DialogResult == DialogResult.OK)
+            if (frmAlumno.DialogResult == DialogResult.OK)
             {
-                if(this.catedra + frmAlumno.Alumno)
+                this.btnCalificar.Enabled = true;
+                this.btnModificar.Enabled = true;
+
+                if (catedra + frmAlumno.Alumno)
                 {
-                    this.lstAlumnos.Items.Add(Alumno.Mostrar(frmAlumno.Alumno));
-                    this.btnCalificar.Enabled = true;
-                    this.btnModificar.Enabled = true;
-                    this.DialogResult = DialogResult.Yes;
+                    this.ActualizarListadoAlumnos();
                 }else
                 {
-                    MessageBox.Show("No se pudo agregar el alumno");
+                    MessageBox.Show("No se pudo agregar el alumno","ERROR");
                 }
             }
         }
@@ -93,11 +91,14 @@ namespace Clase_10
 
             if(index>=0)
             {
+                Alumno alumno =  this.catedra.Alumnos[index];
                 FrmAlumnoCalificado frmCalificado = new FrmAlumnoCalificado();
                 frmCalificado.ShowDialog();
                 
-                if(frmCalificado.DialogResult == DialogResult.OK)
+                if(frmCalificado.DialogResult == DialogResult.OK && frmCalificado.AlumnoCalificado.Nota >5)
                 {
+                    this.ActualizarListadoAlumnos();
+                    this.lstAlumnosCalificados.Items.Add(frmCalificado.Alumno);
                 }
             }
         }
@@ -107,16 +108,15 @@ namespace Clase_10
             int indice = this.lstAlumnos.SelectedIndex;
             if (indice >=0)
             {
-                FrmAlumno alumno = new FrmAlumno(this.catedra.Alumnos[indice]);
-                alumno.ShowDialog();
+                FrmAlumno frmAlumno = new FrmAlumno(this.catedra.Alumnos[indice]);
+                frmAlumno.ShowDialog();
                 
-                
-               // alumno.txtLegajo
-                //alumno.cmbTipoDeExamen.Enabled = false;
+                if(frmAlumno.DialogResult == DialogResult.OK && (this.catedra - this.catedra.Alumnos[indice]) && (this.catedra + frmAlumno.Alumno))
+                {
+                    this.ActualizarListadoAlumnos();
+                    
+                }
             }
-
-
-
-    }
+        }
     }
 }
