@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC1C4CC5-5E5D-45CD-A1A6-BB3D9AEAB558}</ProjectGuid>
+    <ProjectGuid>{8DE00B83-AD94-4EB8-93C9-DF78F1681CE2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Clase_04</RootNamespace>
-    <AssemblyName>Clase_04</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Clase_04.Entidades\Clase_04.Entidades.csproj">
-      <Project>{d075a41b-81fa-4b4d-ad7c-a606641fe8d3}</Project>
-      <Name>Clase_04.Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

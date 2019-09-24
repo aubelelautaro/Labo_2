@@ -7,3 +7,12 @@ C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netst
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.dll
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.pdb
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\bin\Debug\netstandard2.0\Clase_04.Entidades.deps.json
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\bin\Debug\netstandard2.0\Clase_04.Entidades.dll
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\bin\Debug\netstandard2.0\Clase_04.Entidades.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.AssemblyInfoInputs.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.AssemblyInfo.cs
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.dll
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.Entidades\obj\Debug\netstandard2.0\Clase_04.Entidades.pdb

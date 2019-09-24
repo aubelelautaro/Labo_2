@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace Clase_10.Entidades
 {
-    class Catedra
+    public class Catedra
     {
         private List<Alumno> alumnos;
 
         public List<Alumno> Alumnos { get { return this.alumnos; } }
 
-        enum ETipoOrdenamiento
+        public enum ETipoOrdenamiento
         {
-            LegajoAscendente,
-            LegajoDescendente,
-            ApellidoAscendente,
-            ApellioDescendente
+            LegajoAscendente,LegajoDescendente,ApellidoAscendente,ApellidoDescendente
         }
 
         public Catedra()
         {
-
+            this.alumnos = new List<Alumno>();
         }
 
         public static bool operator !=(Catedra c, Alumno a)
@@ -36,7 +33,8 @@ namespace Clase_10.Entidades
 
             if (c == a)
             {
-                retorno = c.Alumnos.Remove(a);
+                retorno = true;
+                c.Alumnos.Remove(a);
             }
             return retorno;
 
@@ -65,7 +63,12 @@ namespace Clase_10.Entidades
         }
         public static bool operator ==(Catedra c, Alumno a)
         {
-            return (!Object.Equals(c, null) && !Object.Equals(a, null) ? c.Alumnos.Contains(a) : false);
+            bool retorno = false;
+            if(!Object.Equals(c, null) && !Object.Equals(a, null) && c.Alumnos.Contains(a))
+            {
+                retorno = true;
+            }
+            return retorno;
         }
     }
 }

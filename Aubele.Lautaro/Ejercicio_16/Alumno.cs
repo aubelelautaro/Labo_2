@@ -21,7 +21,7 @@ namespace Ejercicio_16
       if(this.nota1 > 3 && this.nota2 >3 )
       {
         Random nota = new Random();
-        this.notaFinal = (Single)nota.Next(1, 10);
+        this.notaFinal = nota.Next(1, 10);
       }
       else
       {
@@ -38,9 +38,9 @@ namespace Ejercicio_16
 
     public string Mostrar()
     {
-      if(this.notaFinal != -1)
+      if(this.notaFinal >0)
       {
-        return this.nombre + " - " + this.apellido + " - " + this.legajo.ToString() + this.notaFinal.ToString(); 
+                return $"{this.nombre} - {this.apellido} - {this.legajo} - {this.notaFinal}"; 
       }
       else
       {

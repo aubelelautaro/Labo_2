@@ -15,16 +15,20 @@ namespace Clase_10
         public FormPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
         }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void cátedraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmCatedra frmCatedra = new FrmCatedra();
+            frmCatedra.MdiParent = this;
+            frmCatedra.Show();
 
         }
 

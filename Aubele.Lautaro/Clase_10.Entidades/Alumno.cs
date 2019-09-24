@@ -67,11 +67,11 @@ namespace Clase_10.Entidades
         public static int OrdenarPorLegajoAsc(Alumno a, Alumno b)
         {
             int retorno = 0;
-            if (a.legajo > b.legajo)
+            if (a.legajo < b.legajo)
             {
                 retorno = -1;
             }
-            else if (a.legajo < b.legajo)
+            else if (a.legajo > b.legajo)
             {
                 retorno = 1;
             }
@@ -81,11 +81,11 @@ namespace Clase_10.Entidades
         public static int OrdenarPorLegajoDesc(Alumno a, Alumno b)
         {
             int retorno = 0;
-            if (a.legajo < b.legajo)
+            if (a.legajo > b.legajo)
             {
                 retorno = -1;
             }
-            else if (a.legajo > b.legajo)
+            else if (a.legajo < b.legajo)
             {
                 retorno = 1;
             }

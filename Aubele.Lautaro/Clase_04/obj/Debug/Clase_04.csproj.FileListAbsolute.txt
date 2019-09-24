@@ -105,3 +105,10 @@ C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.csproj
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.csproj.CopyComplete
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.exe
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\bin\Debug\ConsoleApp1.exe.config
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\bin\Debug\ConsoleApp1.exe
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\bin\Debug\ConsoleApp1.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\ConsoleApp1.exe
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\ConsoleApp1.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04\obj\Debug\Clase_04.csprojAssemblyReference.cache

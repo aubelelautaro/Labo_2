@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clase_10.Entidades
 {
-    class AlumnoCalificado : Alumno
+     public class AlumnoCalificado : Alumno
     {
         protected double nota;
 

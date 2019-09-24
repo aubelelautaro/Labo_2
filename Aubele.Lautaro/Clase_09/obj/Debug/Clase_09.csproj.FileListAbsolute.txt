@@ -8,3 +8,13 @@ C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.csproj
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.csproj.CopyComplete
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.exe
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\bin\Debug\Clase_09.exe.config
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\bin\Debug\Clase_09.exe
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\bin\Debug\Clase_09.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\bin\Debug\Clases_09.dll
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\bin\Debug\Clases_09.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.csproj.CopyComplete
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.exe
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_09\obj\Debug\Clase_09.pdb

@@ -4,3 +4,8 @@ C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clase_09.Entid
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clases_09.dll
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clases_09.pdb
 C:\Users\alumno\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clase_09.Entidades.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clases_09\bin\Debug\Clases_09.dll
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clases_09\bin\Debug\Clases_09.pdb
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clase_09.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clases_09.dll
+C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clases_09\obj\Debug\Clases_09.pdb

@@ -57,11 +57,11 @@
     <Compile Include="FrmAlumno.Designer.cs">
       <DependentUpon>FrmAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlumnoModificado.cs">
+    <Compile Include="FrmAlumnoCalificado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlumnoModificado.Designer.cs">
-      <DependentUpon>FrmAlumnoModificado.cs</DependentUpon>
+    <Compile Include="FrmAlumnoCalificado.Designer.cs">
+      <DependentUpon>FrmAlumnoCalificado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCatedra.cs">
       <SubType>Form</SubType>
@@ -73,6 +73,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlumno.resx">
+      <DependentUpon>FrmAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlumnoCalificado.resx">
+      <DependentUpon>FrmAlumnoCalificado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCatedra.resx">
       <DependentUpon>FrmCatedra.cs</DependentUpon>
@@ -98,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clase_10.Entidades\Clase_10.Entidades.csproj">
+      <Project>{77efa201-06a7-4509-a84e-78694f40e294}</Project>
+      <Name>Clase_10.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
