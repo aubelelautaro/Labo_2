@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,18 +35,25 @@ namespace Clase_10.Entidades
 
         public static string Mostrar(Alumno a)
         {
-            return !Object.Equals(a, null) ? $"Nombre: {a.nombre} Apellido: {a.apellido}  Legajo: {a.legajo}  Examen: {a.examen}" : "ERROR";
+            string retorno = "Error";
+            if (!Object.Equals(a, null))
+            {
+              retorno = $"Nombre: {a.nombre} Apellido: {a.apellido}  Legajo: {a.legajo}  Examen: {a.examen}";
+            }
+            return retorno;
         }
 
-        public static bool operator ==(Alumno a, Alumno b)
+      public static bool operator ==(Alumno a, Alumno b)
         {
             bool retorno = false;
 
-            if(a.legajo == b.legajo)
+            if(!Object.Equals(a,null) && !Object.Equals(b,null))
             {
-                retorno = true;
+                if(a.legajo == b.legajo)
+                {
+                    retorno = true;
+                }
             }
-
             return retorno;
         }
 

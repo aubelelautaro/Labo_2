@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +21,14 @@ namespace Clase_10.Entidades
         {
         }
 
-        public string Mostrar()
+        private string Mostrar()
         {
             return Alumno.Mostrar(this) + "Nota: " + this.nota;
         }
-    }
+
+        public override string ToString()
+        {
+          return this.Mostrar();
+        }
+  }
 }

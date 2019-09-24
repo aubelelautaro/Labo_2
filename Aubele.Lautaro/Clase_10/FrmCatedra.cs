@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,7 +65,7 @@ namespace Clase_10
 
             if(frmAlumno.DialogResult == DialogResult.OK)
             {
-                if(this.catedra != frmAlumno.Alumno)
+                if(this.catedra + frmAlumno.Alumno)
                 {
                     this.lstAlumnos.Items.Add(Alumno.Mostrar(frmAlumno.Alumno));
                     this.btnCalificar.Enabled = true;
@@ -93,27 +93,30 @@ namespace Clase_10
 
             if(index>=0)
             {
-                FrmAlumnoCalificado frmCalificado = new FrmAlumnoCalificado(this.catedra.Alumnos[index]);
+                FrmAlumnoCalificado frmCalificado = new FrmAlumnoCalificado();
                 frmCalificado.ShowDialog();
+                
                 if(frmCalificado.DialogResult == DialogResult.OK)
                 {
-                    if (frmCalificado.AlumnoCalificado.Nota > 5)
-                    {
-                        this.lstAlumnos.Items.RemoveAt(index);
-                        this.lstAlumnosCalificados.Items.Add(AlumnoCalificado.Mostrar(frmCalificado.AlumnoCalificado));
-                    }
                 }
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FrmAlumno alumno = new FrmAlumno();
-            alumno.ShowDialog();
-            //alumno.Legajo.Enabled = false;
-            //alumno.cmbTipoDeExamen.Enabled = false;
+            int indice = this.lstAlumnos.SelectedIndex;
+            if (indice >=0)
+            {
+                FrmAlumno alumno = new FrmAlumno(this.catedra.Alumnos[indice]);
+                alumno.ShowDialog();
+                
+                
+               // alumno.txtLegajo
+                //alumno.cmbTipoDeExamen.Enabled = false;
+            }
 
 
-        }
+
+    }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,15 +13,22 @@ namespace Clase_10
 {
     public partial class FrmAlumno : Form
     {
-        private Alumno alumno;
+        protected Alumno alumno;
 
-        public Alumno Alumno
+        public virtual Alumno Alumno
         {
             get
             {
                 return this.alumno;
             }
         }
+        public FrmAlumno(Alumno a):this()
+        {
+            this.txtApellido.Text = a.Apellido;
+            this.txtNombre.Text = a.Nombre;
+            this.txtLegajo.Text = a.Legajo.ToString();
+        }
+
         public FrmAlumno()
         {
             InitializeComponent();

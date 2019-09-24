@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,11 +64,23 @@ namespace Clase_10.Entidades
         public static bool operator ==(Catedra c, Alumno a)
         {
             bool retorno = false;
-            if(!Object.Equals(c, null) && !Object.Equals(a, null) && c.Alumnos.Contains(a))
+            if (!Object.Equals(c, null) && !Object.Equals(a, null))
             {
-                retorno = true;
+                retorno = c.Alumnos.Contains(a);
             }
             return retorno;
         }
+
+    public override string ToString()
+    {
+      string cadena = " ";
+      foreach(Alumno item in this.alumnos)
+      {
+        
+        cadena += item.ToString();
+        cadena += "\n";
+      }
+      return cadena;
     }
+  }
 }

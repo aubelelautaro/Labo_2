@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,35 +11,37 @@ using Clase_10.Entidades;
 
 namespace Clase_10
 {
-    public partial class FrmAlumnoCalificado : Form
+    public partial class FrmAlumnoCalificado : FrmAlumno
     {
-        private Alumno alumno;
-        private AlumnoCalificado calificado;
-
-        public AlumnoCalificado AlumnoCalificado
+        public override Alumno Alumno
         {
             get
             {
-                return this.calificado;
+                return this.alumno;
+            }
+            set
+            {
+                base.txtApellido.Text = value.Apellido;
+                base.txtNombre.Text = value.Nombre;
+                base.txtLegajo.Text = value.Legajo.ToString();
+                base.cmbTipoDeExamen.SelectedItem = value.Examen;
+
+                base.txtApellido.Enabled = false;
+                base.txtNombre.Enabled = false;
+                base.txtLegajo.Enabled = false;
+                base.cmbTipoDeExamen.Enabled = false;
             }
         }
 
         public FrmAlumnoCalificado()
         {
             InitializeComponent();
-            this.txtNombre.Enabled = false;
-            this.txtApellido.Enabled = false;
-            this.txtLegajo.Enabled = false;
-            this.cmbTipoDeExamen.Enabled = false;
-            this.txtNota.Focus();
-        }
 
-        public FrmAlumnoCalificado(Alumno a):this()
-        {
-            this.txtApellido.Text = a.Apellido;
-            this.txtLegajo.Text = a.Legajo.ToString();
-            this.txtNombre.Text = a.Nombre;
-            this.alumno = a;
+            base.txtApellido.Enabled = false;
+            base.txtNombre.Enabled = false;
+            base.txtLegajo.Enabled = false;
+            base.cmbTipoDeExamen.Enabled = false;
+            this.txtNota.Focus();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace Clase_10
             {
                 if (nota >= 0 && nota <= 10)
                 {
-                    calificado = new AlumnoCalificado(this.alumno, nota);
+                    alumno = new AlumnoCalificado(this.alumno, nota);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
@@ -69,5 +71,6 @@ namespace Clase_10
                 MessageBox.Show("La nota debe ser un numero entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

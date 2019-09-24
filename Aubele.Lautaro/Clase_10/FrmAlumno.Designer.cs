@@ -1,4 +1,4 @@
-﻿namespace Clase_10
+namespace Clase_10
 {
     partial class FrmAlumno
     {
@@ -110,7 +110,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(16, 271);
+            this.btnAceptar.Location = new System.Drawing.Point(16, 277);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(84, 23);
             this.btnAceptar.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(118, 271);
+            this.btnCancelar.Location = new System.Drawing.Point(118, 277);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 23);
             this.btnCancelar.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 306);
+            this.ClientSize = new System.Drawing.Size(226, 312);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cmbTipoDeExamen);
@@ -155,12 +155,12 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblLegajo;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Label lblExamen;
-        private System.Windows.Forms.ComboBox cmbTipoDeExamen;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-    }
+    protected System.Windows.Forms.TextBox txtApellido;
+    protected System.Windows.Forms.TextBox txtNombre;
+    protected System.Windows.Forms.TextBox txtLegajo;
+    protected System.Windows.Forms.ComboBox cmbTipoDeExamen;
+  }
 }
