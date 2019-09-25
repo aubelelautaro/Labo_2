@@ -92,13 +92,13 @@ namespace Clase_10
             if(index>=0)
             {
                 Alumno alumno =  this.catedra.Alumnos[index];
-                FrmAlumnoCalificado frmCalificado = new FrmAlumnoCalificado();
+                FrmAlumnoCalificado frmCalificado = new FrmAlumnoCalificado(alumno);
                 frmCalificado.ShowDialog();
                 
                 if(frmCalificado.DialogResult == DialogResult.OK && frmCalificado.AlumnoCalificado.Nota >5)
                 {
                     this.ActualizarListadoAlumnos();
-                    this.lstAlumnosCalificados.Items.Add(frmCalificado.Alumno);
+                    this.lstAlumnosCalificados.Items.Add(alumno.ToString());
                 }
             }
         }

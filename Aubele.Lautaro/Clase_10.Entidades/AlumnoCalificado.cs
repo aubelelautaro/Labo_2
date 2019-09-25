@@ -12,7 +12,7 @@ namespace Clase_10.Entidades
 
         public double Nota { get {return this.nota; } }
 
-        /// LLEGA SIEMPRE NULL ALUMNO, REVISAR!!
+        
         public AlumnoCalificado(Alumno a,double nota):base(a.Nombre,a.Apellido,a.Legajo,a.Examen)
         {
             this.nota = nota;

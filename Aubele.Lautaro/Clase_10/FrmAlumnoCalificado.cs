@@ -13,12 +13,11 @@ namespace Clase_10
 {
     public partial class FrmAlumnoCalificado : FrmAlumno
     {
-        protected TextBox txtCalificacion;
         private AlumnoCalificado alumnoCalificado;
         private Alumno alumno;
         public AlumnoCalificado AlumnoCalificado { get { return this.alumnoCalificado; } }
 
-        public FrmAlumnoCalificado():base()
+        public FrmAlumnoCalificado()
         {
             InitializeComponent();
             base.txtApellido.Enabled = false;
@@ -29,12 +28,13 @@ namespace Clase_10
         public FrmAlumnoCalificado(Alumno a) : this()
         {
             this.alumno = a;
-            this.txtNombre.Text = a.Nombre;
-            this.txtApellido.Text = a.Apellido;
-            this.txtLegajo.Text = a.Legajo.ToString();
-            this.cmbTipoDeExamen.SelectedItem = a.Examen;
-            this.txtNota.Focus();
+            base.txtNombre.Text = a.Nombre;
+            base.txtApellido.Text = a.Apellido;
+            base.txtLegajo.Text = a.Legajo.ToString();
+            base.cmbTipoDeExamen.SelectedItem = a.Examen;
+
         }
+        /// falta sacar el alumno de la catedra al ponerle nota y mostrar la nota.
 
         protected override void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -43,9 +43,14 @@ namespace Clase_10
 
         protected override void btnAceptar_Click(object sender, EventArgs e)
         {
-            txtCalificacion = txtNota;
-            alumnoCalificado = new AlumnoCalificado(alumno, double.Parse(txtCalificacion.Text));
-            DialogResult = DialogResult.OK;
+            double num;
+
+            if(double.TryParse(this.txtNota.Text, out num))
+            {
+                this.alumnoCalificado = new AlumnoCalificado(this.alumno, num);
+                DialogResult = DialogResult.OK;
+            }
+            
         }
 
     }
