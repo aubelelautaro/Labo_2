@@ -26,3 +26,17 @@ C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Cl
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.csproj.CopyComplete
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.dll
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.deps.json
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.runtimeconfig.json
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.runtimeconfig.dev.json
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.dll
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.Entidades.dll
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\bin\Debug\netcoreapp2.0\Clase_05.Entidades.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.AssemblyInfoInputs.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.AssemblyInfo.cs
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.csproj.CopyComplete
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.dll
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_05\obj\Debug\netcoreapp2.0\Clase_05.pdb

@@ -25,7 +25,7 @@ namespace Clase_10.Entidades
 
         private string Mostrar()
         {
-            return Mostrar(this) + "Nota: " + this.nota;
+            return Alumno.Mostrar(this) + "Nota: " + this.nota;
         }
 
         public override string ToString()

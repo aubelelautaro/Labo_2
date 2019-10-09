@@ -97,8 +97,11 @@ namespace Clase_10
                 
                 if(frmCalificado.DialogResult == DialogResult.OK && frmCalificado.AlumnoCalificado.Nota >5)
                 {
-                    this.ActualizarListadoAlumnos();
-                    this.lstAlumnosCalificados.Items.Add(alumno.ToString());
+                    if (this.catedra - this.catedra.Alumnos[index])
+                    {
+                        this.ActualizarListadoAlumnos();
+                        this.lstAlumnosCalificados.Items.Add(frmCalificado.AlumnoCalificado);
+                    }
                 }
             }
         }

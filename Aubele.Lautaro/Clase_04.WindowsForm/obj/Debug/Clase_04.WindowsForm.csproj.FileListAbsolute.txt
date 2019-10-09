@@ -17,3 +17,13 @@ C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clas
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.csproj.CoreCompileInputs.cache
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.exe
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\bin\Debug\Clase_04.WindowsForm.exe.config
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\bin\Debug\Clase_04.WindowsForm.exe
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\bin\Debug\Clase_04.WindowsForm.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.Form1.resources
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.Properties.Resources.resources
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.csproj.GenerateResource.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.exe
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_04.WindowsForm\obj\Debug\Clase_04.WindowsForm.pdb

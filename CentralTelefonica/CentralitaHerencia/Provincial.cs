@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    class Provincial : Llamada
+    public class Provincial : Llamada
     {
         protected EFranja _franjaHoraria;
-        public override float CostoLLamada
+        public override float CostoLlamada
         {
             get
             {
@@ -45,9 +45,9 @@ namespace CentralitaHerencia
         protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($" Franja horaria: {this._franjaHoraria} - Costo: {this.CostoLLamada}");
+            sb.Append($" Franja horaria: {this._franjaHoraria} - Costo: {this.CostoLlamada}");
 
-            return Mostrar() + sb.ToString();
+            return base.Mostrar() + sb.ToString();
         }
 
         public Provincial(EFranja miFranja,Llamada unallamada):this(unallamada.NroOrigen,miFranja,unallamada.Duracion,unallamada.NroDestino)
@@ -57,12 +57,13 @@ namespace CentralitaHerencia
 
         public Provincial(string origen,EFranja miFranja,float duracion, string destino):base(origen,destino,duracion)
         {
-
+            this._franjaHoraria = miFranja;
         }
 
+	
         public override string ToString()
         {
-            return Mostrar();
+            return this.Mostrar();
         }
 
     }

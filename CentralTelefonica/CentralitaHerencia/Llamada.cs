@@ -63,6 +63,11 @@ namespace CentralitaHerencia
             return sb.ToString();
         }
 
+	public static int OrdenarPorDuracionDesc(Llamada uno, Llamada dos)
+        {
+            return -1 *OrdenarPorDuracion(uno, dos);
+        }
+
         public static bool operator ==(Llamada uno,Llamada dos)
         {
             bool retorno = false;
@@ -85,7 +90,7 @@ namespace CentralitaHerencia
             return !(uno == dos);
         }
 
-        public int OrdenarPorDuracion(Llamada uno,Llamada dos)
+        public static int OrdenarPorDuracion(Llamada uno,Llamada dos)
         {
             int retorno = 0;
             if(uno._duracion>dos._duracion)

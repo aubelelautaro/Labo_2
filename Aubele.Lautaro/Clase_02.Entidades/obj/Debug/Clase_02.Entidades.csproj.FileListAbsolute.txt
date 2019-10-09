@@ -16,3 +16,9 @@ C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.dll
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.pdb
 C:\Users\lauch\Desktop\Labo_2\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\bin\Debug\Clase_02.Entidades.dll
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\bin\Debug\Clase_02.Entidades.pdb
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.csprojAssemblyReference.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.dll
+C:\Users\lauch\Desktop\Labo_2-master\Aubele.Lautaro\Clase_02.Entidades\obj\Debug\Clase_02.Entidades.pdb
