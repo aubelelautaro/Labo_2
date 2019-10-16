@@ -1,0 +1,10 @@
+D:\VisualStudio\Clase(16.10)\TestEntidades\obj\Debug\TestEntidades.csprojAssemblyReference.cache
+D:\VisualStudio\Clase(16.10)\TestEntidades\obj\Debug\TestEntidades.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Clase(16.10)\TestEntidades\bin\Debug\TestEntidades.exe.config
+D:\VisualStudio\Clase(16.10)\TestEntidades\bin\Debug\TestEntidades.exe
+D:\VisualStudio\Clase(16.10)\TestEntidades\bin\Debug\TestEntidades.pdb
+D:\VisualStudio\Clase(16.10)\TestEntidades\bin\Debug\Entidades.dll
+D:\VisualStudio\Clase(16.10)\TestEntidades\bin\Debug\Entidades.pdb
+D:\VisualStudio\Clase(16.10)\TestEntidades\obj\Debug\TestEntidades.csproj.CopyComplete
+D:\VisualStudio\Clase(16.10)\TestEntidades\obj\Debug\TestEntidades.exe
+D:\VisualStudio\Clase(16.10)\TestEntidades\obj\Debug\TestEntidades.pdb
