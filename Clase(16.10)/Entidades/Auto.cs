@@ -43,7 +43,7 @@ namespace Entidades
             bool retorno = false;
             if(!(a is null) && !(b is null))
             {
-                if(a._marca == b._marca && a._color == b._marca)
+                if(a._marca == b._marca && a._color == b._color)
                 {
                     retorno = true;
                 }
