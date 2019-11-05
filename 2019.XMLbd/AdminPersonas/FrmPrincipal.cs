@@ -17,6 +17,7 @@ namespace AdminPersonas
     public partial class FrmPrincipal : Form
     {
         private List<Persona> lista;
+        private DataTable tablaPersonas;
 
         public FrmPrincipal()
         {
@@ -24,7 +25,8 @@ namespace AdminPersonas
 
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
-
+            this.tablaPersonas = new DataTable("Personas");
+            this.CargarDataTable();
             this.lista = new List<Persona>();
         }
 
@@ -37,7 +39,7 @@ namespace AdminPersonas
                 XmlSerializer xml = new XmlSerializer(typeof(List<Persona>));
                 XmlTextReader xmltxt = new XmlTextReader(openFileDialog1.FileName);
 
-                
+
                 this.lista = (List<Persona>)xml.Deserialize(xmltxt);
 
                 xmltxt.Close();
@@ -91,20 +93,20 @@ namespace AdminPersonas
                 SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
 
                 sql.Open();
-                MessageBox.Show("EXITO!");
+                MessageBox.Show("Se abrió la base de datos");
                 SqlCommand comando = new SqlCommand();
 
                 comando.Connection = sql;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "SELECT * FROM[personas_bd].[dbo].[personas]";
+                comando.CommandText = "SELECT * FROM Personas";
 
                 SqlDataReader dataReader = comando.ExecuteReader(); // no se puede hacer busquedas, solo va para adelante, TODOS LOS REGISTROS DE LA BASE DE DATOS VAN A ESTAR EN ESTE OBJETO, PERO SE LE UNA SOLA VEZ
                 //EL EXECTUE READER TRAE TODOS LOS DATOS DEL SERVIDOR Y LA IDEA ES RECUPERARLO, PASANDOLE LOS PARAMETROS AL CONSTRUCTOR DE LA LISTA A PARTIR DE LA BASE DE DATOS
                 while (dataReader.Read() != false)
                 {
-                    this.lista.Add(new Persona(dataReader[1].ToString(), dataReader[2].ToString(),Convert.ToInt32(dataReader[3])));
+                    this.lista.Add(new Persona(dataReader[1].ToString(), dataReader[2].ToString(), Convert.ToInt32(dataReader[3])));
 
-                    MessageBox.Show($"Id: {dataReader[0].ToString()}\nNombre: {dataReader[1].ToString()}\nApellido: {dataReader[2].ToString()}\nEdad: {dataReader[3].ToString()}");
+                    //MessageBox.Show($"Id: {dataReader[0].ToString()}\nNombre: {dataReader[1].ToString()}\nApellido: {dataReader[2].ToString()}\nEdad: {dataReader[3].ToString()}");
                     /*MessageBox.Show(dataReader[0].ToString()); id
                     MessageBox.Show(dataReader[1].ToString()); nombre
                     MessageBox.Show(dataReader[2].ToString()); apellido
@@ -121,6 +123,25 @@ namespace AdminPersonas
             {
                 MessageBox.Show(exc.Message);
             }
+        }
+
+        private void CargarDataTable()
+        {
+            SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
+
+            sql.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM Personas";
+            comando.Connection = sql;
+            SqlDataReader dataReader = comando.ExecuteReader();
+            //this.tablaPersonas.Rows.Add();
+
+            this.tablaPersonas.Load(dataReader);
+            
+            comando.Connection.Close();
+            sql.Close();
         }
     }
 }

@@ -29,6 +29,10 @@ namespace AdminPersonas
         public frmPersona(Persona persona):this()
         {
             miPersona = persona;
+            this.txtNombre.Text = persona.nombre;
+            this.txtApellido.Text = persona.apellido;
+            this.txtEdad.Text = persona.edad.ToString();
+
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)

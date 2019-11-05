@@ -73,8 +73,8 @@ namespace AdminPersonas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            int index = 0;
-            if(lstVisor.SelectedIndex >=0)
+            int index = lstVisor.SelectedIndex;
+            if(index  >=0)
             {
                 Persona per = lista[index];
                 frmPersona frm = new frmPersona(per);
@@ -95,10 +95,7 @@ namespace AdminPersonas
 
                         comando.CommandType = CommandType.Text;
 
-                        comando.CommandText = $"UPDATE Personas SET nombre = '{frm.Persona.nombre}' WHERE id = index+1" +
-                            $"UPDATE Personas SET apellido = '{frm.Persona.apellido}' WHERE id = index+1" +
-                            $"UPDATE Personas SET edad = '{frm.Persona.edad}' WHERE id = index+1";
-
+                        comando.CommandText = $"UPDATE Personas SET nombre = '{frm.Persona.nombre}',apellido = '{frm.Persona.apellido}',edad = {frm.Persona.edad}  WHERE id = {index+1}";
 
                         comando.ExecuteNonQuery();
 
@@ -125,6 +122,28 @@ namespace AdminPersonas
             {
                 this.lista.Remove(lista[index]);
                 this.ActualizarLista();
+
+                try
+                {
+                    SqlCommand comando = new SqlCommand();
+                    SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
+
+                    sql.Open();
+                    comando.Connection = sql;
+
+                    comando.CommandType = CommandType.Text;
+
+                    comando.CommandText = $"DELETE FROM Personas WHERE id = {index + 1}";
+
+                    comando.ExecuteNonQuery();
+
+                    comando.Connection.Close();
+                    sql.Close();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
             }
             
         }
