@@ -1,4 +1,4 @@
-﻿using Entidades;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,15 +24,20 @@ namespace AdminPersonas
             }
         }
 
-        public frmVisorPersona(List<Persona> lista)
+        public frmVisorPersona()
         {
             InitializeComponent();
+        }
+
+        public frmVisorPersona(List<Persona> lista):this()
+        {
+            
             this.lista = lista;
             this.ActualizarLista();
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        protected virtual void btnAgregar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -71,7 +76,7 @@ namespace AdminPersonas
 
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        protected virtual void btnModificar_Click(object sender, EventArgs e)
         {
             int index = lstVisor.SelectedIndex;
             if(index  >=0)
@@ -112,7 +117,7 @@ namespace AdminPersonas
             
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        protected virtual void btnEliminar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;

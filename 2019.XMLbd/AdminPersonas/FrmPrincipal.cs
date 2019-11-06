@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +18,8 @@ namespace AdminPersonas
     {
         private List<Persona> lista;
         private DataTable tablaPersonas;
-
-        public FrmPrincipal()
+        private SqlDataAdapter sqlDataAdapter;
+    public FrmPrincipal()
         {
             InitializeComponent();
 
@@ -129,19 +129,63 @@ namespace AdminPersonas
         {
             SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
 
-            sql.Open();
-
             SqlCommand comando = new SqlCommand();
+
             comando.CommandType = CommandType.Text;
+            
             comando.CommandText = "SELECT * FROM Personas";
             comando.Connection = sql;
-            SqlDataReader dataReader = comando.ExecuteReader();
-            //this.tablaPersonas.Rows.Add();
+            this.sqlDataAdapter = new SqlDataAdapter(comando.CommandText, sql);
+            this.sqlDataAdapter.Fill(this.tablaPersonas);
 
-            this.tablaPersonas.Load(dataReader);
+
+      this.sqlDataAdapter.InsertCommand = new SqlCommand();
+      this.sqlDataAdapter.InsertCommand.CommandText = "INSERT INTO Personas VALUES(@p1,@p2,@p3)";
+      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
+      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
+      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
+
+      this.sqlDataAdapter.UpdateCommand = new SqlCommand();
+      this.sqlDataAdapter.UpdateCommand.CommandText = "UPDATE Personas SET nombre = @p1,apellido = @p2,edad = @p3  WHERE id = @p0";
+      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
+      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
+      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
+
+
+      this.sqlDataAdapter.DeleteCommand = new SqlCommand();
+      this.sqlDataAdapter.DeleteCommand.CommandText = "DELETE FROM Personas WHERE id = @p0";
+
+
+
+      //sql.Open();
+      //SqlDataReader dataReader = comando.ExecuteReader();
+      //this.tablaPersonas.Rows.Add();
+      //this.tablaPersonas.Load(dataReader);
+      //sql.Close();
+      //comando.Connection.Close();
+    }
+
+    private void visorDataTableToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      frmVisorDataTable frmData = new frmVisorDataTable(this.tablaPersonas);
+
+        if(frmData.ShowDialog() == DialogResult.OK)
+        {
             
-            comando.Connection.Close();
-            sql.Close();
         }
     }
+
+    private void sincronizarToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      try
+      {
+          this.sqlDataAdapter.Update(this.tablaPersonas);
+      }
+      catch (Exception exc)
+      {
+        MessageBox.Show(exc.Message);
+      }
+      
+    }
+  }
 }
