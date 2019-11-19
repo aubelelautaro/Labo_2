@@ -1,0 +1,8 @@
+D:\VisualStudio\Clase_19.11\Persona\bin\Debug\Persona.dll
+D:\VisualStudio\Clase_19.11\Persona\bin\Debug\Persona.pdb
+D:\VisualStudio\Clase_19.11\Persona\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Clase_19.11\Persona\obj\Debug\Persona.dll
+D:\VisualStudio\Clase_19.11\Persona\obj\Debug\Persona.pdb
+D:\VisualStudio\Clase_19.11\Persona\obj\Debug\Entidades.csproj.CopyComplete
+D:\VisualStudio\Clase_19.11\Persona\bin\Debug\Entidades.Externa.Sellada.dll
+D:\VisualStudio\Clase_19.11\Persona\bin\Debug\Persona.dll.config
