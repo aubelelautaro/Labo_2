@@ -19,7 +19,8 @@ namespace AdminPersonas
         private List<Persona> lista;
         private DataTable tablaPersonas;
         private SqlDataAdapter sqlDataAdapter;
-    public FrmPrincipal()
+
+        public FrmPrincipal()
         {
             InitializeComponent();
 
@@ -139,53 +140,46 @@ namespace AdminPersonas
             this.sqlDataAdapter.Fill(this.tablaPersonas);
 
 
-      this.sqlDataAdapter.InsertCommand = new SqlCommand();
-      this.sqlDataAdapter.InsertCommand.CommandText = "INSERT INTO Personas VALUES(@p1,@p2,@p3)";
-      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
-      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
-      this.sqlDataAdapter.InsertCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
+            this.sqlDataAdapter.InsertCommand = new SqlCommand("INSERT INTO Personas VALUES(@p1,@p2,@p3)",sql);
+            this.sqlDataAdapter.InsertCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
+            this.sqlDataAdapter.InsertCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
+            this.sqlDataAdapter.InsertCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
 
-      this.sqlDataAdapter.UpdateCommand = new SqlCommand();
-      this.sqlDataAdapter.UpdateCommand.CommandText = "UPDATE Personas SET nombre = @p1,apellido = @p2,edad = @p3  WHERE id = @p0";
-      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
-      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
-      this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
+            this.sqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Personas SET nombre = @p1,apellido = @p2,edad = @p3  WHERE id = @id ",sql);
+            this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p1", SqlDbType.VarChar, 50, "nombre");
+            this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p2", SqlDbType.VarChar, 50, "apellido");
+            this.sqlDataAdapter.UpdateCommand.Parameters.Add("@p3", SqlDbType.Int, 5, "edad");
 
 
-      this.sqlDataAdapter.DeleteCommand = new SqlCommand();
-      this.sqlDataAdapter.DeleteCommand.CommandText = "DELETE FROM Personas WHERE id = @p0";
+            this.sqlDataAdapter.DeleteCommand = new SqlCommand("DELETE FROM Personas WHERE id = @id",sql);
 
 
 
-      //sql.Open();
-      //SqlDataReader dataReader = comando.ExecuteReader();
-      //this.tablaPersonas.Rows.Add();
-      //this.tablaPersonas.Load(dataReader);
-      //sql.Close();
-      //comando.Connection.Close();
-    }
+            //sql.Open();
+            //SqlDataReader dataReader = comando.ExecuteReader();
+            //this.tablaPersonas.Rows.Add();
+            //this.tablaPersonas.Load(dataReader);
+            //sql.Close();
+            //comando.Connection.Close();
+        }
 
     private void visorDataTableToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      frmVisorDataTable frmData = new frmVisorDataTable(this.tablaPersonas);
+        frmVisorDataTable frmData = new frmVisorDataTable(this.tablaPersonas);
+        frmData.Show();
+    }
 
-        if(frmData.ShowDialog() == DialogResult.OK)
+        private void sincronizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+          try
+          {
+                this.sqlDataAdapter.Update(this.tablaPersonas);
+                MessageBox.Show("Sincronizado");
+          }
+          catch (Exception exc)
+          {
+            MessageBox.Show(exc.Message);
+          }
         }
     }
-
-    private void sincronizarToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      try
-      {
-          this.sqlDataAdapter.Update(this.tablaPersonas);
-      }
-      catch (Exception exc)
-      {
-        MessageBox.Show(exc.Message);
-      }
-      
-    }
-  }
 }

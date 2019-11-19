@@ -41,7 +41,6 @@ namespace AdminPersonas
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;
-
             frm.ShowDialog();
             if(frm.DialogResult == DialogResult.OK)
             {
@@ -78,55 +77,19 @@ namespace AdminPersonas
 
         protected virtual void btnModificar_Click(object sender, EventArgs e)
         {
-            int index = lstVisor.SelectedIndex;
-            if(index  >=0)
-            {
-                Persona per = lista[index];
-                frmPersona frm = new frmPersona(per);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.ShowDialog();
-                if(frm.DialogResult == DialogResult.OK)
-                {
-                    this.lista.Remove(per);
-                    this.lista.Add(frm.Persona);
-
-                    try
-                    {
-                        SqlCommand comando = new SqlCommand();
-                        SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
-
-                        sql.Open();
-                        comando.Connection = sql;
-
-                        comando.CommandType = CommandType.Text;
-
-                        comando.CommandText = $"UPDATE Personas SET nombre = '{frm.Persona.nombre}',apellido = '{frm.Persona.apellido}',edad = {frm.Persona.edad}  WHERE id = {index+1}";
-
-                        comando.ExecuteNonQuery();
-
-                        comando.Connection.Close();
-                        sql.Close();
-                    }
-                    catch (Exception exc)
-                    {
-                        MessageBox.Show(exc.Message);
-                    }
-                }
-                this.ActualizarLista();
-            }
-            
-        }
-
-        protected virtual void btnEliminar_Click(object sender, EventArgs e)
-        {
-            frmPersona frm = new frmPersona();
-            frm.StartPosition = FormStartPosition.CenterScreen;
+            this.btnModificar.Click -= new EventHandler(this.btnModificar_Click);
+            this.btnEliminar.Click -= new EventHandler(this.btnEliminar_Click);
             int index = this.lstVisor.SelectedIndex;
 
-            if(index >=0)
+            Persona per = lista[index];
+
+            frmPersona frm = new frmPersona(per);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+            if(frm.DialogResult == DialogResult.OK)
             {
-                this.lista.Remove(lista[index]);
-                this.ActualizarLista();
+                this.lista.Remove(per);
+                this.lista.Add(frm.Persona);
 
                 try
                 {
@@ -138,7 +101,7 @@ namespace AdminPersonas
 
                     comando.CommandType = CommandType.Text;
 
-                    comando.CommandText = $"DELETE FROM Personas WHERE id = {index + 1}";
+                    comando.CommandText = $"UPDATE Personas SET nombre = '{frm.Persona.nombre}',apellido = '{frm.Persona.apellido}',edad = {frm.Persona.edad}  WHERE id = {lstVisor.SelectedIndex}";
 
                     comando.ExecuteNonQuery();
 
@@ -150,7 +113,43 @@ namespace AdminPersonas
                     MessageBox.Show(exc.Message);
                 }
             }
-            
+            this.ActualizarLista();
+        }
+
+        protected virtual void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmPersona frm = new frmPersona();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+
+            int index = this.lstVisor.SelectedIndex;
+
+            this.lista.Remove(lista[index]);
+            this.ActualizarLista();
+
+            try
+            {
+                SqlCommand comando = new SqlCommand();
+                SqlConnection sql = new SqlConnection(Properties.Settings.Default.Conexion);
+
+                sql.Open();
+                comando.Connection = sql;
+
+                comando.CommandType = CommandType.Text;
+
+                comando.CommandText = $"DELETE FROM Personas WHERE id = {this.lstVisor.SelectedIndex}";
+
+                comando.ExecuteNonQuery();
+
+                comando.Connection.Close();
+                sql.Close();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            this.btnModificar.Click -= new EventHandler(this.btnModificar_Click);
+            this.btnEliminar.Click -= new EventHandler(this.btnEliminar_Click);
         }
 
         private void ActualizarLista()
@@ -160,6 +159,20 @@ namespace AdminPersonas
             {
                 this.lstVisor.Items.Add(value.ToString());
             }
+        }
+
+        private void frmVisorPersona_Load(object sender, EventArgs e)
+        {
+
+            this.btnAgregar.Click += new EventHandler(this.btnAgregar_Click);
+            
+        }
+
+        private void lstVisor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //garantiza que el index no sea -1 y sea valido, borrar el if ( selectedindex>=0)...
+            this.btnModificar.Click += new EventHandler(this.btnModificar_Click);
+            this.btnEliminar.Click += new EventHandler(this.btnEliminar_Click);
         }
     }
 }

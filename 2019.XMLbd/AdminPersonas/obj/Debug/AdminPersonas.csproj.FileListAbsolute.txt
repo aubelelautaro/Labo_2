@@ -74,3 +74,4 @@ C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\AdminPersonas\o
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\AdminPersonas\obj\Debug\AdminPersonas.exe
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\AdminPersonas\obj\Debug\AdminPersonas.pdb
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\AdminPersonas\obj\Debug\AdminPersonas.frmVisorDataTable.resources
+C:\Users\alumno\Downloads\Labo_2-master\2019.XMLbd\AdminPersonas\obj\Debug\AdminPersonas.frmVisorDataTable.resources

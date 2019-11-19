@@ -20,3 +20,4 @@ C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\Entidades\bin\D
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\Entidades\obj\Debug\Entidades.dll
 C:\Users\alumno\Downloads\Labo_2-master\Labo_2-master\2019.XMLbd\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alumno\Downloads\Labo_2-master\2019.XMLbd\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
