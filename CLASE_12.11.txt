@@ -1,0 +1,10 @@
+/// <summary>
+         /// "BUTTON1_CLICK ES EL OBJETO.EVENTO" OBJETO DELEGADO CONTIENE DIRECCIONES DE MEMORIAS NO DE OTROS OBJETOS, SINO Q CONTIENE DIRECCIONES DE FUNCIONES(TODAS LAS DIRECCIONES DE MEMORIA DE TODAS LAS FUNCIONES DEL MANEJADOR DE EVENTOS
+         /// SIEMPRE TIENE QUE TENER LA MISMA FIRMA. EJ: private void Identificador(object s, EventArgs e)
+         /// </summary>
+         /// <param name="sender"> EMISOR DE EVENTO</param>
+         /// <param name="e"> INFORMACION DEL EVENTO</param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
